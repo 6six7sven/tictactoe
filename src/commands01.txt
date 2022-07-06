@@ -1,0 +1,7 @@
+npx                                         load template
+npm install                                 install dependencies
+npm run start                               start local website instance
+np run build                                
+
+git init
+git add.
