@@ -1,12 +1,13 @@
 import React from "react";
 import Board from "./components/Board";
 
+import "./styles/root.scss"
 // this is not html syntax its akhchually react syntax
 // a component must return a single element 
 // <> is basically react fragment (empty element)
 const App = () => {
 	return (
-		<div>
+		<div className="app">
 			<h1> Tic Tac Toe </h1>
 			<Board></Board>
 		</div>

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { Children } from "react";
 
-const Square = ({value}) => {
+//import "./Square.style.css";
 
-    return <button type = "button"> {value} </button>
+
+const Square = ({   value }) => {
+
+    return <button type = "button" className="square"> {   value  } </button>
 }
 
 export default Square;
