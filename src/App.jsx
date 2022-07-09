@@ -1,6 +1,8 @@
 import React, {  useState  } from "react";
 import Board from "./components/Board";
+import History from "./components/history";
 import { calculateWinner } from "./helpers";
+
 
 import "./styles/root.scss"
 // this is not html syntax its akhchually react syntax
@@ -21,7 +23,7 @@ const App = () => {
 		? `winner is ${winner}` 
 		: `Next player is ${current.isXNext ? "X" : "O"}`;
 
-	console.log(winner);
+	//console.log(winner);
 	//console.log(board);
   
 	const handleSquareClick = position => {
@@ -45,11 +47,16 @@ const App = () => {
 	  setCurrentMove(prev => prev+1);
 	};
 
+	const moveTo = (move) => {
+		setCurrentMove(move);
+	}
+
 	return (
 		<div className="app">
 			<h1> Tic Tac Toe </h1>
 			<h2>	{  message  }		</h2>
 			<Board board = {current.board} handleSquareClick={handleSquareClick}/>
+			<History history = {history} moveTo = {moveTo} currentMove = {currentMove}/>  
 		</div>
 	);
 };
@@ -57,13 +64,3 @@ const App = () => {
 export default App;
 
 
-
-
-
-/* 
-export default () => (
-  <>
-	<h1>Welcome to React Vite Micro App!</h1>
-	<p>Hard to get more minimal than this React app.</p>
-  </>
-); */
