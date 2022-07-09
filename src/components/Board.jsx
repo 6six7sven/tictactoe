@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Square from './Square';
 
-const Board = () => {
-  const [board, setBoard] = useState(Array(9).fill(null));
+const Board = ({  board, handleSquareClick  }) => {
+
+/*   const [board, setBoard] = useState(Array(9).fill(null));
   const [isXNext, setIsXNext] = useState(false);
+
+  console.log(board);
 
   const handleSquareClick = position => {
     if (board[position]) {
@@ -21,7 +24,7 @@ const Board = () => {
     });
 
     setIsXNext(prev => !prev);
-  };
+  }; */
 
   const renderSquare = position => {
     return (
