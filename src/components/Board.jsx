@@ -1,7 +1,7 @@
 import React from 'react';
 import Square from './Square';
 
-const Board = ({  board, handleSquareClick  }) => {
+const Board = ({  board, handleSquareClick, winningSquares   }) => {
 
 /*   const [board, setBoard] = useState(Array(9).fill(null));
   const [isXNext, setIsXNext] = useState(false);
@@ -27,10 +27,14 @@ const Board = ({  board, handleSquareClick  }) => {
   }; */
 
   const renderSquare = position => {
+
+    const isWinningSquare = winningSquares.includes(position)
+
     return (
       <Square
         value={board[position]}
         onClick={() => handleSquareClick(position)}
+        isWinningSquare={isWinningSquare}
       />
     );
   };
