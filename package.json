@@ -10,8 +10,7 @@
     "format": "prettier --write src/**/*.js",
     "format:lint": "npm run format && npm run lint",
     "clear": "rimraf dist .parcel-cache",
-    "deploy": "aws s3 sync /build s3://react-test-website-5 --acl public-read",
-    "homepage": "https://master.dllayaoexmuru.amplifyapp.com/#/"
+    "deploy": "aws s3 sync /build s3://react-test-website-5 --acl public-read"
   },
   "dependencies": {
     "react": "^17.0.2",
